@@ -54,7 +54,7 @@ cd ../..
 ln -s bitcoin-sv-$BITCOIN_VERSION-arm64 bitcoin
 mkdir bitcoin-data
 
-cat << EOL > $PWD/bitcoin-data/bitcoin.conf
+cat << EOL > bitcoin-data/bitcoin.conf
 port=18333
 rpcbind=0.0.0.0
 rpcport=18332
@@ -86,7 +86,7 @@ EOL
 ### 7. Optionally, create scripts to start bitcoind and run bitcoin-cli
 ###
 
-vi $PWD/start.sh
+vi start.sh
 
 ```
 #!/bin/bash
@@ -97,7 +97,7 @@ $EXE -conf=$DIR/bitcoin-data/bitcoin.conf -datadir=$DIR/bitcoin-data -daemon -st
 chmod 755 start.sh
 ```
 
-vi $PWD/b.sh
+vi b.sh
 
 ```
 #!/bin/bash
@@ -108,3 +108,13 @@ $EXE -datadir=$DIR/bitcoin-data $@
 chmod 755 b.sh
 ```
 
+### 8. Start bitcoind
+```
+./start.sh
+```
+
+### 9. Run bitcoin-cli commands:
+```
+./b.sh getinfo
+./b.sh generate 101
+```
