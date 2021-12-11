@@ -1,6 +1,6 @@
 # Build bitcoin-sv for an M1 Mac.
 
-The latest binaries are available [here](https://link).  It you download these to your machine, you can skip to step 6
+The latest binaries are available [here](https://github.com/ordishs/bitcoin-sv-arm64/tree/main/bitcoin-sv-1.0.10-arm64).  It you download these to your machine, you can skip to step 6.
 
 
 ### 1. Firstly, you will need homebrew installed on your machine
