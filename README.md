@@ -4,7 +4,9 @@ The latest binaries are available [here](https://github.com/ordishs/bitcoin-sv-a
 
 
 ### 1. Firstly, you will need homebrew installed on your machine
-
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ### 2. Install the following packages:
 ```
