@@ -1,0 +1,11 @@
+prefix=/Users/ordishs/dev/bitcoin-sv-arm64/bitcoin-sv-1.0.10-src/bitcoin-sv-1.0.10/../../bitcoin-sv-1.0.10-arm64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Bitcoin SV consensus library
+Description: Library for the Bitcoin consensus protocol.
+Version: 1.0.10
+Libs: -L${libdir} -lbitcoinconsensus
+Cflags: -I${includedir}
+Requires.private: libcrypto

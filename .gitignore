@@ -1,0 +1,6 @@
+.history
+
+*.tar.gz
+
+bitcoin-sv-*-src/
+bitcoin-data/
