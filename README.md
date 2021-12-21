@@ -1,8 +1,5 @@
 # Build bitcoin-sv for an M1 Mac.
 
-The latest binaries are available [here](https://github.com/ordishs/bitcoin-sv-arm64/tree/main/bitcoin-sv-1.0.10-arm64).  It you download these to your machine, you can skip to step 6.
-
-
 ### 1. Firstly, you will need homebrew installed on your machine
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -20,6 +17,11 @@ brew install libevent
 
 brew install berkeley-db@4
 ```
+
+
+__The latest binaries are available [here](https://github.com/ordishs/bitcoin-sv-arm64/tree/main/bitcoin-sv-1.0.10-arm64).  If you don't want to compile bitcoin on you machine, you can use these pre-built binaries and skip to step 6.__
+
+
 
 ### 3. Set the version and download the source:
 ```
@@ -117,4 +119,14 @@ chmod 755 b.sh
 ```
 ./b.sh getinfo
 ./b.sh generate 101
+```
+
+### 10. To have Bitcoin start as a service on your Mac
+
+There is a script that will create the appropriate bitcoind.plist file:
+
+```
+./enable.sh
+
+launchctl load -w ~/Library/LaunchAgents/bitcoind.plist
 ```
