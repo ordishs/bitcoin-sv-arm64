@@ -43,7 +43,7 @@ cd bitcoin-sv-$BITCOIN_VERSION
 
 ### 4. Configure the build on your machine
 ```
-LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/Cellar/libsodium/1.0.18_1 -L/opt/homebrew/Cellar/zeromq/4.3.4 -L/opt/homebrew/Cellar/libevent/2.1.12 -L/opt/homebrew/opt/berkeley-db@4/lib" ./configure --with-boost=/opt/homebrew/Cellar/boost/1.76.0 --disable-tests --disable-bench --prefix $PWD/../../bitcoin-sv-$BITCOIN_VERSION-arm64
+CPPFLAGS="-I/opt/homebrew/Cellar/libevent/2.1.12/include" LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/Cellar/libsodium/1.0.18_1 -L/opt/homebrew/Cellar/zeromq/4.3.4 -L/opt/homebrew/Cellar/libevent/2.1.12 -L/opt/homebrew/opt/berkeley-db@4/lib" ./configure --with-boost=/opt/homebrew/Cellar/boost@1.76/1.76.0 --disable-tests --disable-bench --prefix $PWD/../../bitcoin-sv-$BITCOIN_VERSION-arm64
 ```
 
 ### 5. Build the binaries:
