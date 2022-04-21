@@ -7,7 +7,7 @@
 
 ### 2. Install the following packages:
 ```
-brew install boost
+brew install boost@1.76
 
 brew install openssl
 
@@ -16,10 +16,14 @@ brew install zmq
 brew install libevent
 
 brew install berkeley-db@4
+
+brew install pkg-config
 ```
 
 
 __The latest binaries are available [here](https://github.com/ordishs/bitcoin-sv-arm64/tree/main/bitcoin-sv-1.0.10-arm64).  If you don't want to compile bitcoin on you machine, you can use these pre-built binaries and skip to step 6.__
+
+> Please note that at the time of writing, boost v1.76.0 was the latest version of boost in Homebrew.  If you do not specify the correct version the pre-built binaries may not work.  There is also a gotcha with Homebrew that when you install a specific version of a library, it will not use the default naming folder for the destination: instead it appends the version number to it.  This will cause the pre-built binaries to fail because the location of the dynamic library does not exist.  Read the error messages carefully and keep your head - you may need to do some renaming.
 
 
 
@@ -39,7 +43,7 @@ cd bitcoin-sv-$BITCOIN_VERSION
 
 ### 4. Configure the build on your machine
 ```
-LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/Cellar/libsodium/1.0.18_1 -L/opt/homebrew/Cellar/zeromq/4.3.4 -L/opt/homebrew/Cellar/libevent/2.1.12 -L/opt/homebrew/opt/berkeley-db@4/lib" ./configure --with-boost=/opt/homebrew/Cellar/boost/1.76.0 --disable-tests --disable-bench --prefix $PWD/../../bitcoin-sv-$BITCOIN_VERSION-arm64
+CPPFLAGS="-I/opt/homebrew/Cellar/libevent/2.1.12/include" LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/Cellar/libsodium/1.0.18_1 -L/opt/homebrew/Cellar/zeromq/4.3.4 -L/opt/homebrew/Cellar/libevent/2.1.12 -L/opt/homebrew/opt/berkeley-db@4/lib" ./configure --with-boost=/opt/homebrew/Cellar/boost@1.76/1.76.0 --disable-tests --disable-bench --prefix $PWD/../../bitcoin-sv-$BITCOIN_VERSION-arm64
 ```
 
 ### 5. Build the binaries:
