@@ -86,6 +86,8 @@ zmqpubremovedfrommempoolblock=tcp://*:28332
 
 zmqpubinvalidtx=tcp://*:28332
 invalidtxsink=ZMQ
+
+minminingtxfee=0.0000005
 EOL
 ```
 
