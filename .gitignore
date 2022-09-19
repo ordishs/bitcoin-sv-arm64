@@ -4,3 +4,7 @@
 
 bitcoin-sv-*-src/
 bitcoin-data/
+
+bsvlite
+settings.conf
+settings.conf.old

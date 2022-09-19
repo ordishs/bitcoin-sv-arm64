@@ -1,4 +1,4 @@
-prefix=/Users/ordishs/dev/bitcoin-sv-arm64/bitcoin-sv-1.0.11-src/../../bitcoin-sv-1.0.11-arm64
+prefix=/Users/ordishs/dev/bitcoin-sv-arm64/bitcoin-sv-1.0.11-src/../bitcoin-sv-1.0.11-arm64
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
