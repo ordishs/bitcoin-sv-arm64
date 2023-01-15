@@ -4,6 +4,8 @@
 
 bitcoin-sv-*-src/
 bitcoin-data/
+bitcoin-data1
+bitcoin-data2
 
 bsvlite
 settings.conf

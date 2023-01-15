@@ -1,0 +1,11 @@
+prefix=/tmp/bitcoin
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Bitcoin SV consensus library
+Description: Library for the Bitcoin consensus protocol.
+Version: 1.0.13
+Libs: -L${libdir} -lbitcoinconsensus
+Cflags: -I${includedir}
+Requires.private: libcrypto
