@@ -24,8 +24,9 @@ cat << EOL > ~/Library/LaunchAgents/bitcoind.plist
     <string>-rpcport=18332</string>
     <string>-onlynet=ipv4</string>
     <string>-zmqpubhashtx=tcp://*:38332</string>
-    <string>-zmqpubhashtx=tcp://*:38332</string>
-    <string>-zmqpubhashtx=tcp://*:38332</string>
+    <string>-zmqpubhashblock=tcp://*:38332</string>
+    <string>-zmqpubhashtx2=tcp://*:38332</string>
+    <string>-zmqpubhashblock2=tcp://*:38332</string>
     <string>-zmqpubdiscardedfrommempool=tcp://*:38332</string>
     <string>-zmqpubremovedfrommempoolblock=tcp://*:38332</string>
     <string>-zmqpubinvalidtx=tcp://*:38332</string>
